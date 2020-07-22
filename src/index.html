@@ -26,55 +26,59 @@
             <h2 class="header">Payment Form Example</h2>
           </div>
           <div class="card-body">
-            <div <div class="form-row">
+            <div class="alert alert-danger d-none"></div>
+            <div class="form-row">
               <div class="form-group col-md-5">
-                <label for="inputEmail4">Card Number</label>
+                <label for="ccnum">Card Number</label>
                 <input
-                  type="email"
+                  type="number"
                   class="form-control"
                   placeholder="XXXX-XXXX-XXXX-XXXX"
-                  id="inputEmail4"
+                  id="exampleAccount"
                 />
               </div>
               <div class="form-group col-md-2">
-                <label for="inputPassword4">CCV</label>
+                <label for="CCV">CCV</label>
                 <input
-                  type="password"
+                  type="number"
                   class="form-control"
                   placeholder="XXX"
-                  id="inputPassword4"
+                  id="exampleCcv"
                 />
               </div>
               <div class="form-group col-md-5">
-                <label for="inputEmail4">Amount</label>
-                <input type="email" class="form-control" id="inputEmail4" />
+                <label for="Amount">Amount</label>
+                <input type="number" class="form-control" id="exampleAmount" />
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
-                <label for="inputEmail4">First Name</label>
-                <input type="text" class="form-control" id="inputEmail4" />
+                <label for="fname">First Name</label>
+                <input type="text" class="form-control" id="exampleFirst" />
               </div>
               <div class="form-group col-md-6">
-                <label for="inputPassword4">Last Name</label>
-                <input type="text" class="form-control" id="inputPassword4" />
+                <label for="lastn">Last Name</label>
+                <input type="text" class="form-control" id="exampleLast" />
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputCity">City</label>
-                <input type="text" class="form-control" id="inputCity" />
+                <input type="text" class="form-control" id="exampleCity" />
               </div>
               <div class="form-group col-md-4">
                 <label for="inputState">State</label>
-                <select id="inputState" class="form-control">
-                  <option selected>Florida</option>
-                  <option>...</option>
+                <select id="exampleState" class="form-control">
+                  <option selected>Pick a state</option>
+                  <option>Florida</option>
+                  <option>Georgia</option>
+                  <option>Pennsylvania</option>
+                  <option>Ohio</option>
                 </select>
               </div>
               <div class="form-group col-md-2">
                 <label for="inputZip">Zip</label>
-                <input type="text" class="form-control" id="inputZip" />
+                <input type="text" class="form-control" id="exampleZip" />
               </div>
             </div>
             <p>We Accept:</p>
@@ -130,14 +134,13 @@
                 <textarea
                   class="form-control is-invalid"
                   id="validationTextarea"
-                  required
                 ></textarea>
               </div>
             </div>
           </div>
           <div class="card-footer text-right">
-            <a href="#" class="btn btn-#636e72">Cancel</a>
-            <a href="#" class="btn btn-primary">Send</a>
+            <button type="reset" class="btn btn-#636e72">Cancel</button>
+            <button type="submit" class="btn btn-primary">Send</button>
           </div>
         </div>
       </form>
