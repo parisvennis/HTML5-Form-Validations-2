@@ -1,29 +1,162 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>HTML5 Form With Validation</title>
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
-    <link rel="shortcut icon" href="./4geeks.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+    <link rel="stylesheet" type="text/css" href="index.scss" />
   </head>
+
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
-      </div>
+    <div class="container">
+      <form id="theForm">
+        <!-- entire card -->
+        <div class="card">
+          <div class="card-header">
+            <h2 class="header">Payment Form Example</h2>
+          </div>
+          <div class="card-body">
+            <div <div class="form-row">
+              <div class="form-group col-md-5">
+                <label for="inputEmail4">Card Number</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="XXXX-XXXX-XXXX-XXXX"
+                  id="inputEmail4"
+                />
+              </div>
+              <div class="form-group col-md-2">
+                <label for="inputPassword4">CCV</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="XXX"
+                  id="inputPassword4"
+                />
+              </div>
+              <div class="form-group col-md-5">
+                <label for="inputEmail4">Amount</label>
+                <input type="email" class="form-control" id="inputEmail4" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">First Name</label>
+                <input type="text" class="form-control" id="inputEmail4" />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Last Name</label>
+                <input type="text" class="form-control" id="inputPassword4" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" id="inputCity" />
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputState">State</label>
+                <select id="inputState" class="form-control">
+                  <option selected>Florida</option>
+                  <option>...</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="inputZip">Zip</label>
+                <input type="text" class="form-control" id="inputZip" />
+              </div>
+            </div>
+            <p>We Accept:</p>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="inlineCheckbox1"
+                    value="option1"
+                  />
+                  <label class="form-check-label" for="inlineCheckbox1">
+                    <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="inlineCheckbox2"
+                    value="option2"
+                  />
+                  <label class="form-check-label" for="inlineCheckbox2">
+                    <i class="fa fa-cc-visa" aria-hidden="true"></i>
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="inlineCheckbox3"
+                    value="option3"
+                  />
+                  <label class="form-check-label" for="inlineCheckbox3">
+                    <i class="fa fa-cc-discover" aria-hidden="true"></i>
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="inlineCheckbox3"
+                    value="option3"
+                  />
+                  <label class="form-check-label" for="inlineCheckbox3">
+                    <i class="fa fa-credit-card" aria-hidden="true"></i>
+                  </label>
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="validationTextarea">Message</label>
+                <textarea
+                  class="form-control is-invalid"
+                  id="validationTextarea"
+                  required
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer text-right">
+            <a href="#" class="btn btn-#636e72">Cancel</a>
+            <a href="#" class="btn btn-primary">Send</a>
+          </div>
+        </div>
+      </form>
     </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
